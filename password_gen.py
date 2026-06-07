@@ -21,19 +21,19 @@ def generate_password(
     exclude_ambiguous: bool = False,
 ) -> str:
     """
-    generates a cryptographically secure random password.
+    generates a cryptographically secure random password
 
     args:
-        length:            Total character count (min 8)
-        use_upper:         Include A-Z
-        use_lower:         Include a-z
-        use_digits:        Include 0-9
-        use_symbols:       Include special characters
-        exclude_ambiguous: Remove visually similar chars (0, O, l, 1, I)
+        length:            total character count (min 8)
+        use_upper:         include A-Z
+        use_lower:         include a-z
+        use_digits:        include 0-9
+        use_symbols:       include special characters
+        exclude_ambiguous: remove visually similar chars (0, O, l, 1, I)
 
     returns:
-        A random password string guaranteed to contain at least one
-        character from each enabled character class.
+        a random password string guaranteed to contain at least one
+        character from each enabled character class
     """
     if length < 8:
         raise ValueError("Password length must be at least 8 characters.")
